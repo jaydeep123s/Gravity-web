@@ -3,11 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CI/CD Pipeline</title>
+    <title>Company Application - CI/CD Pipeline</title>
     <link rel="stylesheet" href="../static/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .main-content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .feature {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            flex: 1;
+            margin: 0 10px;
+        }
+        .feature h3 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the CI/CD Pipeline Demo!</h1>
-    <p>This is a simple web application to demonstrate a CI/CD pipeline using Jenkins.</p>
+    <header>
+        <h1>Welcome to the Company Application</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <section id="home">
+                <h2>Home</h2>
+                <p>This is a comprehensive web application to demonstrate the capabilities of our CI/CD pipeline.</p>
+            </section>
+
+            <section id="features">
+                <h2>Features</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Feature One</h3>
+                        <p>Detailed description of feature one.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Feature Two</h3>
+                        <p>Detailed description of feature two.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Feature Three</h3>
+                        <p>Detailed description of feature three.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>About</h2>
+                <p>Information about the company and the purpose of this application.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Contact information and support details.</p>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
