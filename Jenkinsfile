@@ -24,7 +24,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sshagent(['myname-key']) {  // Use the ID assigned in Jenkins for the SSH credentials
+                sshagent(['34.213.162.58']) {  // Use the ID assigned in Jenkins for the SSH credentials
                     sh 'chmod +x deploy.sh'
                     sh 'scp -o StrictHostKeyChecking=no deploy.sh ubuntu@34.213.162.58:/home/ubuntu/deploy'
                     sh 'ssh -o StrictHostKeyChecking=no ubuntu@34.213.162.58 "bash /home/ubuntu/deploy/deploy.sh"'
