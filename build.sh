@@ -1,7 +1,11 @@
-# Create a virtual environment if it doesn't exist
-python3 -m venv venv
-# Activate the virtual environment
-source venv/bin/activate
-# Install dependencies
-pip install -r requirements.txt
-# Run your build commands
+#!/bin/bash
+
+echo "Running tests..."
+
+# Navigate to the app directory
+cd app
+
+# Run a basic test to check if the app starts
+python -m unittest discover -s tests
+
+echo "Tests completed."
