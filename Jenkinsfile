@@ -26,12 +26,12 @@ pipeline {
             steps {
                 script {
                     echo 'Starting deployment...'
-                    withCredentials([file(credentialsId: '34.213.162.58', variable: 'SSH_KEY')]) {
+                    withCredentials([sshUserPrivateKey(credentialsId: '34.213.162.58', keyFileVariable: 'SSH_KEY', usernameVariable: 'USER')]) {
                         sh 'chmod +x deploy.sh'
                         echo 'Running SCP...'
-                        sh "scp -i ${SSH_KEY} -o StrictHostKeyChecking=no deploy.sh ubuntu@34.213.162.58:/home/ubuntu/deploy"
+                        sh "scp -i ${SSH_KEY} -o StrictHostKeyChecking=no deploy.sh ${USER}@34.213.162.58:/home/${USER}/deploy"
                         echo 'Running SSH...'
-                        sh "ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no ubuntu@34.213.162.58 'cd /home/ubuntu/deploy && ./deploy.sh'"
+                        sh "ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no ${USER}@34.213.162.58 'cd /home/${USER}/deploy && ./deploy.sh'"
                     }
                 }
             }
