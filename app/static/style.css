@@ -1,13 +1,45 @@
+/* Gravity-web/app/static/style.css */
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 50px;
+    background-color: #2c3e50; /* Dark background color */
+    color: #ecf0f1; /* Light text color for better contrast */
 }
 
 h1 {
-    color: #2c3e50;
+    color: #e74c3c; /* Red color for headings */
 }
 
 p {
-    color: #34495e;
+    color: #bdc3c7; /* Lighter grey color for paragraphs */
+}
+
+/* Additional styles for a dark theme */
+header, footer {
+    background-color: #34495e; /* Dark grey background for header and footer */
+    color: #ecf0f1; /* Light text color for header and footer */
+    padding: 10px 0;
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Light color for navigation links */
+}
+
+.container {
+    background-color: #2c3e50; /* Dark background for the main content area */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.features .feature {
+    background: #34495e; /* Dark grey background for feature boxes */
+    color: #ecf0f1; /* Light text color for feature boxes */
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
