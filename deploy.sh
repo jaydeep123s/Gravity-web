@@ -1,11 +1,14 @@
 #!/bin/bash
 
-echo "Deploying application..."
+echo "Starting deployment..."
 
-# Navigate to the app directory
-cd app
+# Navigate to the deployment directory
+cd /home/ubuntu/deploy
 
-# Start the Flask application
-nohup python app.py > /dev/null 2>&1 &
+# Ensure the script is executable
+chmod +x deploy.sh
+
+# Run deployment steps
+./deploy.sh
 
 echo "Deployment completed."
