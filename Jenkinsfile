@@ -31,7 +31,7 @@ pipeline {
                         echo 'Running SCP...'
                         sh "scp -i ${SSH_KEY} -o StrictHostKeyChecking=no deploy.sh ${USER}@34.213.162.58:/home/${USER}/deploy"
                         echo 'Running SSH...'
-                        sh "ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no ${USER}@34.213.162.58'cd /home/${USER}/deploy && ./deploy.sh'"
+                        sh "ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no ${USER}@34.213.162.58 'cd /home/${USER}/deploy && ./deploy.sh'"
                     }
                 }
             }
