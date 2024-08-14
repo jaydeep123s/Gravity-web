@@ -17,10 +17,10 @@ export FLASK_APP=app.py
 export FLASK_ENV=production
 
 # Kill any existing Flask process running on port 80 (optional, depends on your setup)
-sudo fuser -k 80/tcp
+sudo fuser -k 5000/tcp
 
-# Start the Flask app on port 80
-nohup flask run --host=0.0.0.0 --port=80 &
+# Start the Flask app on port 5000
+nohup flask run --host=0.0.0.0 --port=5000 &
 
 # Print a message indicating the deployment has completed
 echo "Deployment completed."
