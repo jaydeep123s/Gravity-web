@@ -22,8 +22,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sshagent(['your-ssh-credentials-id']) {
-                    sh 'ssh -o StrictHostKeyChecking=no ec2-user@<Web-Server-IP> "bash -s" < deploy.sh'
+                sshagent(['myname']) {
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@34.213.162.58 "bash -s" < deploy.sh'
                 }
             }
         }
@@ -35,3 +35,4 @@ pipeline {
         }
     }
 }
+
