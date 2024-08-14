@@ -3,7 +3,7 @@
 echo "Starting deployment..."
 
 # Navigate to the deployment directory
-cd /home/ubuntu/deploy
+cd /home/ubuntu/
 
 # Ensure the script is executable
 chmod +x deploy.sh
