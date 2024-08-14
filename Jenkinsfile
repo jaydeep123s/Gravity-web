@@ -29,7 +29,7 @@ pipeline {
                     withCredentials([sshUserPrivateKey(credentialsId: '35.93.223.235', keyFileVariable: 'SSH_KEY', usernameVariable: 'USER')]) {
                         sh 'chmod +x deploy.sh'
                         echo 'Running SCP...'
-                        sh "scp -i ${SSH_KEY} -o StrictHostKeyChecking=no deploy.sh ${USER}@34.213.162.58:/home/${USER}/deploy"
+                        sh "scp -i ${SSH_KEY} -o StrictHostKeyChecking=no deploy.sh ${USER}@35.93.223.235:/home/${USER}/deploy"
                         echo 'Running SSH...'
                         sh "ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no ${USER}@35.93.223.235 'cd /home/${USER}/deploy && ./deploy.sh'"
                     }
