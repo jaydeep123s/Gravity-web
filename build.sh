@@ -1,14 +1,16 @@
 #!/bin/bash
 
-echo "Running tests..."
+# Create a virtual environment
+python3 -m venv venv
 
-# Navigate to the app directory
-cd app
+# Activate the virtual environment
+source venv/bin/activate
 
-# Install dependencies
-pip3 install -r requirements.txt
+# Install the required packages
+pip install -r requirements.txt
 
-# Run a basic test to check if the app starts
-python3 -m unittest discover -s tests
+# Run the tests
+python -m unittest discover -s app/tests
 
-echo "Tests completed."
+# Deactivate the virtual environment
+deactivate
