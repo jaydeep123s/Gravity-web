@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/jaydeep123s/Gravity-web.git'
+                git branch: 'myapp', url: 'https://github.com/jaydeep123s/Gravity-web.git'
             }
         }
 
