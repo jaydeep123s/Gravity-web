@@ -10,4 +10,4 @@ fi
 
 cd /home/ubuntu/deploy
 
-# Your existing deployment steps
+# Proceed with your existing deployment steps
